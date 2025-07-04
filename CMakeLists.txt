@@ -76,6 +76,7 @@ install(TARGETS
 #file(GLOB SCRIPT_FILES scripts/*)
 install(PROGRAMS
   scripts/dvl_a50.py
+  scripts/dvl_position_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

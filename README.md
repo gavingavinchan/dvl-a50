@@ -91,6 +91,7 @@ $ ros2 lifecycle set /dvl_a50_node shutdown
 ## ROS2 Topics 
 - `/dvl/data`
 - `/dvl/position`
+- `/dvl/path`
 - `dvl/config/status`
 - `dvl/command/response`
 - `dvl/config/command`
