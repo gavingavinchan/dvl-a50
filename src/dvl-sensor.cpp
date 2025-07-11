@@ -156,8 +156,8 @@ void DVL_A50::publish_vel_trans_report()
     dvl.header.frame_id = velocity_frame_id;
 		
     dvl.time = double(json_data["time"]);
-    dvl.time_of_validity = json_data["time_of_validity"].get<int64_t>();
-    dvl.time_of_transmission = json_data["time_of_transmission"].get<int64_t>();
+    // dvl.time_of_validity = json_data["time_of_validity"].get<int64_t>();
+    // dvl.time_of_transmission = json_data["time_of_transmission"].get<int64_t>();
 
     dvl.velocity.x = double(json_data["vx"]);
     dvl.velocity.y = double(json_data["vy"]);
@@ -175,7 +175,7 @@ void DVL_A50::publish_vel_trans_report()
     dvl.form = json_data["format"];
 
     // Add covariance from message
-    std::vector<double> twistCovariance;
+    /* std::vector<double> twistCovariance;
 
     if (json_data.contains("covariance") && json_data["covariance"].is_array()) {
         const auto& matrix = json_data["covariance"];
@@ -188,7 +188,7 @@ void DVL_A50::publish_vel_trans_report()
         }
     }
 
-    dvl.covariance = twistCovariance;
+    dvl.covariance = twistCovariance; */
 			
     beam0.id = json_data["transducers"][0]["id"];
     beam0.velocity = double(json_data["transducers"][0]["velocity"]);
@@ -229,8 +229,8 @@ void DVL_A50::publish_dead_reckoning_report()
 {
     dvl_msgs::msg::DVLDR DVLDeadReckoning;
     //std::cout << std::setw(4) << json_data << std::endl;
-    DVLDeadReckoning.header.stamp = Node::now();
-    DVLDeadReckoning.header.frame_id = position_frame_id;
+    // DVLDeadReckoning.header.stamp = Node::now();
+    // DVLDeadReckoning.header.frame_id = position_frame_id;
     DVLDeadReckoning.time = double(json_data["ts"]);
     DVLDeadReckoning.position.x = double(json_data["x"]);
     DVLDeadReckoning.position.y = double(json_data["y"]);

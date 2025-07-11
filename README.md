@@ -25,7 +25,7 @@ $ colcon build
 ```
 
 ### Usage
-There are three ways to use this package. The first one uses a python script, the second one a node written in c++, for which the external library [Json](https://github.com/nlohmann/json) was used. These versions allow to run a node in a separate process with the benefits of process/fault isolation as well as easier debugging. The latest version uses [Lifecycle](https://index.ros.org/p/lifecycle/github-ros2-demos/) for node management and [composition](https://docs.ros.org/en/foxy/Tutorials/Composition.html) to increase efficiency. Thus it's possible to have more control over the TCP/IP socket configuration needed for communication. 
+There are two ways to use this package. The first one uses a python script, the second one a node written in c++, for which the external library [Json](https://github.com/nlohmann/json) was used. These versions allow to run a node in a separate process with the benefits of process/fault isolation as well as easier debugging. The latest version uses [Lifecycle](https://index.ros.org/p/lifecycle/github-ros2-demos/) for node management and [composition](https://docs.ros.org/en/foxy/Tutorials/Composition.html) to increase efficiency. Thus it's possible to have more control over the TCP/IP socket configuration needed for communication. 
 
 - First, find and set a static IP address (usually: 192.168.194.90) on your computer. 
 
@@ -42,10 +42,26 @@ $ ros2 run dvl_a50 dvl_a50.py --ros-args -p ip_address:='192.168.194.95'
 ```
 $ cd ~/ros2_ws
 $ source install/setup.bash
-$ ros2 run dvl_a50 dvl_a50_sensor --ros-args -p dvl_ip_address:='192.168.2.95'
-or
 $ ros2 launch dvl_a50 dvl_a50.launch.py ip_address:='192.168.194.95'
 ```
+
+### RViz2 Visualization
+To visualize the DVL's dead reckoning path in RViz2, you can use the provided launch file:
+
+```
+$ cd ~/ros2_ws
+$ source install/setup.bash
+$ ros2 launch dvl_a50 dvl_a50.launch.py ip_address:='192.168.194.95'
+```
+
+This will start the DVL driver, the `position_to_path_node`, and a `static_transform_publisher`.
+
+Then, in RViz2:
+
+1.  Set the **Fixed Frame** to `odom`.
+2.  Add a **Path** display.
+3.  Set the **Topic** of the Path display to `/dvl/path`.
+
 #### Lifecycle management (deprecated)
 ROS 2 introduces the concept of managed nodes, also called LifecycleNodes. Managed nodes contain a state machine with a set of predefined states. These states can be changed by invoking a transition id which indicates the succeeding consecutive state.
 

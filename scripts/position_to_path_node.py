@@ -7,9 +7,12 @@ from nav_msgs.msg import Path
 from geometry_msgs.msg import PoseStamped
 from rclpy.qos import qos_profile_sensor_data
 
+from builtin_interfaces.msg import Time
+
 class PositionToPathNode(Node):
     def __init__(self):
-        super().__init__('dvl_pose_publisher')
+        super().__init__('position_to_path_node')
+        self.declare_parameter('frame_id', 'odom')
         self.subscription = self.create_subscription(
             DVLDR,
             '/dvl/position',
@@ -21,12 +24,12 @@ class PositionToPathNode(Node):
     def listener_callback(self, msg):
         pose = PoseStamped()
 
-        # --- CORRECTED TIMESTAMP ---
-        # Use the timestamp from the incoming message header.
-        # This preserves the original timing of the data.
-        pose.header.stamp = msg.header.stamp
+        # Convert float timestamp to Time message
+        secs = int(msg.time)
+        nsecs = int((msg.time - secs) * 1e9)
+        pose.header.stamp = Time(sec=secs, nanosec=nsecs)
 
-        pose.header.frame_id = self.get_parameter_or('frame_id', 'odom')
+        pose.header.frame_id = self.get_parameter('frame_id').get_parameter_value().string_value
         pose.pose.position.x = msg.position.x
         pose.pose.position.y = msg.position.y
         pose.pose.position.z = msg.position.z

@@ -1,0 +1,41 @@
+[0.000000] (-) TimerEvent: {}
+[0.000121] (dvl_a50) JobQueued: {'identifier': 'dvl_a50', 'dependencies': OrderedDict()}
+[0.000241] (dvl_a50) JobStarted: {'identifier': 'dvl_a50'}
+[0.003437] (dvl_a50) JobProgress: {'identifier': 'dvl_a50', 'progress': 'cmake'}
+[0.003864] (dvl_a50) Command: {'cmd': ['/usr/bin/cmake', '/home/gavin/ros2_ws/src/dvl-a50', '-DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/src/dvl-a50/install/dvl_a50'], 'cwd': '/home/gavin/ros2_ws/src/dvl-a50/build/dvl_a50', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gavin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('HOME', '/home/gavin'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/gavin/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/gavin/.nvm/versions/node/v22.17.0/bin'), ('NVM_INC', '/home/gavin/.nvm/versions/node/v22.17.0/include/node'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2540'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/gavin/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('LOGNAME', 'gavin'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gavin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('PATH', '/home/gavin/.nvm/versions/node/v22.17.0/bin:/home/gavin/.pixi/bin:/home/gavin/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gavin-Legion:@/tmp/.ICE-unix/2511,unix/gavin-Legion:/tmp/.ICE-unix/2511'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/32a28795_3712_48da_b98c_e1fb1c23802f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.ISXX82'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/gavin/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gavin/ros2_ws/src/dvl-a50/build/dvl_a50'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/gavin/anaconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.086313] (dvl_a50) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.100018] (-) TimerEvent: {}
+[0.119094] (dvl_a50) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.126049] (dvl_a50) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.182622] (dvl_a50) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.186113] (dvl_a50) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.186559] (dvl_a50) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.186872] (dvl_a50) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.190641] (dvl_a50) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.200169] (-) TimerEvent: {}
+[0.239753] (dvl_a50) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.243434] (dvl_a50) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.243508] (dvl_a50) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.243703] (dvl_a50) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.252082] (dvl_a50) StderrLine: {'line': b'CMake Error at CMakeLists.txt:20 (find_package):\n'}
+[0.252187] (dvl_a50) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[0.252233] (dvl_a50) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[0.252256] (dvl_a50) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[0.252276] (dvl_a50) StderrLine: {'line': b'\n'}
+[0.252296] (dvl_a50) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[0.252315] (dvl_a50) StderrLine: {'line': b'  any of the following names:\n'}
+[0.252333] (dvl_a50) StderrLine: {'line': b'\n'}
+[0.252352] (dvl_a50) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[0.252374] (dvl_a50) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[0.252395] (dvl_a50) StderrLine: {'line': b'\n'}
+[0.252412] (dvl_a50) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[0.252431] (dvl_a50) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[0.252449] (dvl_a50) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[0.252467] (dvl_a50) StderrLine: {'line': b'  has been installed.\n'}
+[0.252485] (dvl_a50) StderrLine: {'line': b'\n'}
+[0.252502] (dvl_a50) StderrLine: {'line': b'\n'}
+[0.252521] (dvl_a50) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.252540] (dvl_a50) StdoutLine: {'line': b'See also "/home/gavin/ros2_ws/src/dvl-a50/build/dvl_a50/CMakeFiles/CMakeOutput.log".\n'}
+[0.253753] (dvl_a50) CommandEnded: {'returncode': 1}
+[0.275205] (dvl_a50) JobEnded: {'identifier': 'dvl_a50', 'rc': 1}
+[0.285495] (-) EventReactorShutdown: {}

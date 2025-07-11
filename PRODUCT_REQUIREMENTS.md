@@ -102,3 +102,15 @@ To visualize the DVL's dead reckoning path in RViz2, follow these steps:
     *   **Zoom Out:** You may need to zoom out significantly in the 3D view to see the entire trajectory, especially if the DVL has moved a large distance.
 
 By following these steps, you should be able to visualize the DVL's dead reckoning path in RViz2.
+
+## 9. Temporary Implementation Plan
+
+This section outlines the temporary plan to implement the features described in this PRD. This section will be removed once the implementation is complete and documented.
+
+1.  **Rename `dvl_position_publisher.py` to `position_to_path_node.py`**: The existing script `dvl_position_publisher.py` will be renamed to `position_to_path_node.py` to match the PRD requirements.
+2.  **Correct the Node Implementation**: The `position_to_path_node.py` script will be modified to:
+    *   Rename the ROS node to `position_to_path_node`.
+    *   Correctly handle the message timestamp. The current implementation has a bug where it assumes a `header` field that does not exist in the `dvl_msgs/msg/DVLDR` message. The timestamp will be read from the `time` field and converted to a `builtin_interfaces.msg.Time` object.
+    *   Properly declare the `frame_id` parameter with a default value of `odom` so it can be configured via launch files or command-line arguments.
+3.  **Integrate into Launch File**: The `position_to_path_node` will be added to the `dvl_a50.launch.py` file. This will allow the DVL driver, the static transform publisher, and the path publisher to be started with a single command, streamlining the user experience.
+4.  **Update Documentation**: The `README.md` file will be updated to document the new `position_to_path_node`, its published topic (`/dvl/path`), and the configurable `frame_id` parameter.

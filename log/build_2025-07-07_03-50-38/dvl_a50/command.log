@@ -1,0 +1,2 @@
+Invoking command in '/home/gavin/ros2_ws/src/dvl-a50/build/dvl_a50': /usr/bin/cmake /home/gavin/ros2_ws/src/dvl-a50 -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/src/dvl-a50/install/dvl_a50
+Invoked command in '/home/gavin/ros2_ws/src/dvl-a50/build/dvl_a50' returned '1': /usr/bin/cmake /home/gavin/ros2_ws/src/dvl-a50 -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/src/dvl-a50/install/dvl_a50
